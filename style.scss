@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'StratosSkyeng';
+  src: url(/fonts/Stratos-Regular.ttf) format('ttf'), url(/fonts/Stratos-Regular.woff) format('woff');
+  font-weight: 400;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+img {
+    max-width: 100%;
+    transition: all 1s;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #004980;
+}
+a {
+   text-decoration: none;
+}
+.divMain {
+  background-color: #004980;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+  height: 100vh;
+}
+
+.divContainer {
+  width: 480px;
+  height: 459px;
+  background-color: #C2F5FF;
+  border-radius: 12px;
+  padding-left: 69px;
+  padding-right: 69px;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  box-sizing:border-box;
+
+  border: #000 1px;
+  display: inline-block;
+}
+
+.divContainerText {
+  display: flex;
+  text-align: center;
+
+  font-size: 40px;
+  font-family: 'StratosSkyeng';
+  color: #004980;
+  font-weight: 400;
+}
+
+.divContainerLevel {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.buttonContainerLevelNumber {
+  width: 97px;
+  height: 98px;
+  margin-top: 48px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+
+  font-weight: 400;
+  font-size: 64px;
+  color: #0080C1;
+  font-family: 'StratosSkyeng';
+}
+.divContainerLevelNumber {
+  width: 97px;
+  height: 98px;
+  margin-top: 48px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+
+  font-weight: 400;
+  font-size: 64px;
+  color: #0080C1;
+  font-family: 'StratosSkyeng';
+}
+.divContainerButton {
+  margin-top: 67px;
+
+  display: flex;
+  justify-content: center;
+}
+.buttonStart {
+  width: 246px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+
+  font-family: 'StratosSkyeng';
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffff;
+
+  background-color: #7AC100
+}
+
