@@ -301,10 +301,4 @@ a {
   height: 133px;
   background-image: url("img/close_card.jpg");
 }
-
-.break {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  height: 0;
-}
 /*# sourceMappingURL=style.css.map */
