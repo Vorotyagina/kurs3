@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выбор сложности</title>
+    <title>Вы победили</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,15 +22,23 @@
 <body>
 
     <div class="divMain">
-      <div class="divContainer">
-        <div class="divContainerText">Выбери сложность</div>
-        <div class="divContainerLevel">
-          <button type="button" class="buttonContainerLevelNumber">1</button>
-          <button type="button" class="buttonContainerLevelNumber">2</button>
-          <button type="button" class="buttonContainerLevelNumber">3</button>
+      <div class="divContainerAgain">
+        <div class="divContainerImage">
+          <img src="img/win.svg" width="93" height="93">
         </div>
-        <div class="divContainerButton">
-          <button type="button" class="buttonStart" onclick="window.location.href='game.html';">Старт</button>
+        <div class="divContainerText">
+          Вы победили!
+        </div>
+        <div class="divContainerTime">
+          <div class="divContainerTimeSmallText">
+            Затраченное время:
+          </div>
+          <div class="divContainerTimeValue">
+            1:20
+          </div>
+        </div>
+        <div class="divContainerButtonAgain">
+          <button type="button" class="buttonStartAgain" onclick="window.location.href='game.html';">Играть снова</button>
         </div>
       </div>
     </div>
