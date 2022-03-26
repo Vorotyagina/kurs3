@@ -25,7 +25,6 @@ a {
 }
 
 .divGameField {
-  //text-align: center;
   margin: auto;
   width: 1030px;
 
@@ -201,10 +200,6 @@ a {
 
 }
 
-.galleryTitleButton {
-
-}
-
 .time {
   display: flex;
   flex-direction: column;
@@ -245,9 +240,6 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   flex-wrap: wrap;
 
- // justify-content: space-between;
-
-  //column-gap: 15px;
   row-gap: 15px;
 
   padding-left: 25px;
@@ -262,7 +254,3 @@ a {
   background-image: url('img/close_card.jpg');
 }
 
-.break {
-  flex-basis: 100%;
-  height: 0;
-}
