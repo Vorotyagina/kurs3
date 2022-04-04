@@ -9,79 +9,24 @@
 </head>
 <body>
   <div class="center">
-    <div class="divGameField">
-      <div class="galleryTitle">
+    <div class="div-game-field">
+      <div class="gallery-title">
         <div class="time">
-          <div class="timeText">
+          <div class="time-text">
             <div>min</div>
             <div>sec</div>
           </div>
-          <div class="timeValue">00:00
+          <div class="time-value">00:00
           </div>
         </div>
-        <div class="galleryTitleButton">
-          <button class="buttonStart">Начать заново</button>
+        <div class="gallery-title-button">
+          <button class="button-start">Начать заново</button>
         </div>
       </div>
       <div class="gallery">
       </div>
     </div>
   </div>
-  <script src="src/script.js">
-
-//     function shuffle(arr){
-// 	    var j, temp;
-// 	    for(var i = arr.length - 1; i > 0; i--) {
-// 		    j = Math.floor(Math.random()*(i + 1));
-// 	    	temp = arr[j];
-// 		    arr[j] = arr[i];
-// 		    arr[i] = temp;
-// 	    }
-
-// 	  return arr;
-//     }
-//  //выводим карты рубашками вверх
-//     const gallery = document.querySelector('.gallery');
-//     var item_number = 36;
-//     var value_card_init = [
-//       '6 бубны', '6 крести', '6 пики', '6 черви',
-//       '7 бубны', '7 крести', '7 пики', '7 черви',
-//       '8 бубны', '8 крести', '8 пики', '8 черви',
-//       '9 бубны', '9 крести', '9 пики', '9 черви',
-//       '10 бубны', '10 крести', '10 пики', '10 черви',
-//       'валет бубны', 'валет крести', 'валет пики', 'валет черви',
-//       'дама бубны', 'дама крести', 'дама пики', 'дама черви',
-//       'король бубны', 'король крести', 'король пики', 'король черви',
-//       'туз бубны', 'туз крести', 'туз пики', 'туз черви',
-//     ]; //массив с порядковыми номерами карт;
-//     console.log(value_card_init);
-//     var value_card = shuffle(value_card_init); //перемешанная колода;
-//     console.log(value_card);
-//     var value = 0;
-//     var column_number = 9;
-//     for (it=1; it<item_number+1; it++) {
-//           const card = document.createElement('div');
-//           card.classList.add('card');
-//           const cardItem = gallery.appendChild(card);
-//     }
-
-//     const cardActive = document.querySelectorAll('.card');
-//    //по клику переворачиваем карты
-//     cardActive.forEach(element => {
-//       element.addEventListener('click', (event) => {
-//         event.preventDefault();
-//             j=0;
-//           temp_element = element;
-//           for (i=36;i>0;i--) {
-//           if (temp_element.previousElementSibling) {
-//             j++;
-//             temp_element = temp_element.previousElementSibling;
-//           }
-//         }
-//         event.target.style.background = `url("img/${value_card[j]}.jpg")`;
-//      });
-//   });
-
-  </script>
+  <script src="src/script.js"></script>
 </body>
 </html>
