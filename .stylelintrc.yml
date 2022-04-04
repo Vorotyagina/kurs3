@@ -8,6 +8,9 @@ plugins:
   [
     'stylelint-scss'
   ]
-rules: [
-   ]
+rules:
+    'scss/at-rule-no-unknown': null
+    'scss/dollar-variable-pattern': '^foo'
+    'scss/selector-no-redundant-nesting-selector': true
+
 overrides: [{ files: ["**/*.scss"], customSyntax: "postcss-scss" }]
