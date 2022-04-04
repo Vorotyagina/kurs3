@@ -6,7 +6,6 @@ function shuffle(arr) {
         arr[j] = arr[i];
         arr[i] = temp;
     }
-
     return arr;
 }
 //выводим карты рубашками вверх

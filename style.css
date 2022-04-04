@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'StratosSkyeng';
-  src: url(/fonts/Stratos-Regular.ttf) format("ttf"), url(/fonts/Stratos-Regular.woff) format("woff");
+  font-family: StratosSkyeng;
+  src: url("/fonts/Stratos-Regular.ttf") format("ttf"), url("/fonts/Stratos-Regular.woff") format("woff");
   font-weight: 400;
 }
 
@@ -18,7 +18,7 @@ img {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   background-color: #004980;
 }
 
@@ -31,12 +31,12 @@ a {
   padding-right: calc(50% - 615px);
 }
 
-.divGameField {
+.div-game-field {
   margin: auto;
   width: 1030px;
 }
 
-.divMain {
+.div-main {
   background-color: #004980;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,37 +55,31 @@ a {
   height: 100vh;
 }
 
-.divContainer {
+.div-container {
   width: 480px;
   height: 459px;
-  background-color: #C2F5FF;
+  background-color: #c2f5ff;
   border-radius: 12px;
-  padding-left: 69px;
-  padding-right: 69px;
-  padding-top: 52px;
-  padding-bottom: 52px;
+  padding: 52px 69px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: #000 1px;
   display: inline-block;
 }
 
-.divContainerAgain {
+.div-container-again {
   width: 480px;
   height: 459px;
-  background-color: #C2F5FF;
+  background-color: #c2f5ff;
   border-radius: 12px;
-  padding-left: 69px;
-  padding-right: 69px;
-  padding-top: 20px;
-  padding-bottom: 52px;
+  padding: 20px 69px 52px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: #000 1px;
   display: inline-block;
 }
 
-.divContainerImage {
+.div-container-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,7 +89,7 @@ a {
   margin-bottom: 10px;
 }
 
-.divContainerText {
+.div-container-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,13 +98,13 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 40px;
-  font-family: 'StratosSkyeng';
+  font-family: StratosSkyeng, sans-serif;
   color: #004980;
   font-weight: 400;
 }
 
-.divContainerTimeSmallText {
-  font-family: 'StratosSkyeng';
+.div-container-time-small-text {
+  font-family: StratosSkyeng, sans-serif;
   font-weight: 400;
   font-size: 24px;
   color: #000;
@@ -118,8 +112,8 @@ a {
   padding-top: 28px;
 }
 
-.divContainerTimeValue {
-  font-family: 'StratosSkyeng';
+.div-container-time-value {
+  font-family: StratosSkyeng, sans-serif;
   font-weight: 400;
   font-size: 64px;
   color: #000;
@@ -127,7 +121,7 @@ a {
   padding-top: 10px;
 }
 
-.divContainerLevel {
+.div-container-level {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +132,7 @@ a {
   gap: 24px;
 }
 
-.buttonContainerLevelNumber {
+.button-container-level-number {
   width: 97px;
   height: 98px;
   margin-top: 48px;
@@ -155,11 +149,11 @@ a {
   background-color: #fff;
   font-weight: 400;
   font-size: 64px;
-  color: #0080C1;
-  font-family: 'StratosSkyeng';
+  color: #0080c1;
+  font-family: StratosSkyeng, sans-serif;
 }
 
-.divContainerLevelNumber {
+.div-container-level-number {
   width: 97px;
   height: 98px;
   margin-top: 48px;
@@ -176,11 +170,11 @@ a {
   background-color: #fff;
   font-weight: 400;
   font-size: 64px;
-  color: #0080C1;
-  font-family: 'StratosSkyeng';
+  color: #0080c1;
+  font-family: StratosSkyeng, sans-serif;
 }
 
-.divContainerButton {
+.div-container-button {
   margin-top: 67px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,7 +184,7 @@ a {
           justify-content: center;
 }
 
-.divContainerButtonAgain {
+.div-container-button-again {
   margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,31 +194,31 @@ a {
           justify-content: center;
 }
 
-.buttonStart {
+.button-start {
   width: 246px;
   height: 48px;
   border-radius: 12px;
   border: none;
-  font-family: 'StratosSkyeng';
+  font-family: StratosSkyeng, sans-serif;
   font-weight: 400;
   font-size: 24px;
   color: #ffff;
-  background-color: #7AC100;
+  background-color: #7ac100;
 }
 
-.buttonStartAgain {
+.button-start-again {
   width: 246px;
   height: 48px;
   border-radius: 12px;
   border: none;
-  font-family: 'StratosSkyeng';
+  font-family: StratosSkyeng, sans-serif;
   font-weight: 400;
   font-size: 24px;
   color: #ffff;
-  background-color: #7AC100;
+  background-color: #7ac100;
 }
 
-.galleryTitle {
+.gallery-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,14 +248,14 @@ a {
           justify-content: right;
   vertical-align: top;
   width: 155px;
-  font-family: 'StratosSkyeng';
+  font-family: StratosSkyeng, sans-serif;
   font-size: 64px;
   font-weight: 400;
   color: #fff;
 }
 
-.timeText {
-  font-family: 'StratosSkyeng';
+.time-text {
+  font-family: StratosSkyeng, sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -275,7 +269,7 @@ a {
   padding-left: 39px;
 }
 
-.timeValue {
+.time-value {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
