@@ -19,6 +19,16 @@ body {
 a {
    text-decoration: none;
 }
+.center {
+  padding-left: calc(50% - 615px);
+  padding-right: calc(50% - 615px);
+}
+
+.divGameField {
+  margin: auto;
+  width: 1030px;
+
+}
 .divMain {
   background-color: #004980;
   display: flex;
@@ -44,14 +54,56 @@ a {
   display: inline-block;
 }
 
+.divContainerAgain {
+  width: 480px;
+  height: 459px;
+  background-color: #C2F5FF;
+  border-radius: 12px;
+  padding-left: 69px;
+  padding-right: 69px;
+  padding-top: 20px;
+  padding-bottom: 52px;
+  box-sizing:border-box;
+
+  border: #000 1px;
+  display: inline-block;
+}
+
+.divContainerImage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 .divContainerText {
   display: flex;
   text-align: center;
+  justify-content: center;
 
   font-size: 40px;
   font-family: 'StratosSkyeng';
   color: #004980;
   font-weight: 400;
+}
+
+.divContainerTimeSmallText {
+  font-family: 'StratosSkyeng';
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
+
+  text-align: center;
+  padding-top: 28px;
+}
+
+.divContainerTimeValue {
+  font-family: 'StratosSkyeng';
+  font-weight: 400;
+  font-size: 64px;
+  color: #000;
+
+  text-align: center;
+  padding-top: 10px;
 }
 
 .divContainerLevel {
@@ -101,6 +153,12 @@ a {
   display: flex;
   justify-content: center;
 }
+.divContainerButtonAgain {
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+}
 .buttonStart {
   width: 246px;
   height: 48px;
@@ -113,5 +171,86 @@ a {
   color: #ffff;
 
   background-color: #7AC100
+}
+
+.buttonStartAgain {
+  width: 246px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+
+  font-family: 'StratosSkyeng';
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffff;
+
+  background-color: #7AC100
+}
+.galleryTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1010px;
+
+
+  padding-left: 22px;
+  padding-right: 22px;
+  margin-top: 22px;
+  margin-bottom: 41px;
+
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  vertical-align: top;
+
+  width: 155px;
+
+  font-family: 'StratosSkyeng';
+  font-size: 64px;
+  font-weight: 400;
+  color: #fff;
+
+}
+
+.timeText {
+  font-family: 'StratosSkyeng';
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+
+  display: flex;
+
+  gap: 57px;
+
+  text-align: right;
+  vertical-align: bottom;
+  width: 100%;
+  padding-left: 39px;
+}
+
+.timeValue {
+  display: flex;
+  align-items: top;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+
+  row-gap: 15px;
+
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+.card {
+  width: 95px;
+  height: 133px;
+
+  background-image: url('img/close_card.jpg');
 }
 
