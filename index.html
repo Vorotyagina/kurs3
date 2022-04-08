@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
-
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выбор сложности</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="fonts/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-      body {
-        background-color: #E5E5E5;;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div class="div-main">
-      <div class="div-container">
-        <div class="div-container-text">Выбери сложность</div>
-        <div class="div-container-level">
-          <button type="button" class="button-container-level-number">1</button>
-          <button type="button" class="button-container-level-number">2</button>
-          <button type="button" class="button-container-level-number">3</button>
-        </div>
-        <div class="div-container-button">
-          <button type="button" class="button-start" onclick="window.location.href='game.html';">Старт</button>
-        </div>
+  <div class="div-main">
+    <div class="div-container">
+      <div class="div-container-text">Выбери сложность</div>
+      <div class="div-container-level">
+        <button type="button" class="level-number">1</button>
+        <button type="button" class="level-number">2</button>
+        <button type="button" class="level-number">3</button>
+      </div>
+      <div class="div-container-button">
+        <button type="button" class="enter">Старт</button>
       </div>
     </div>
-
+  </div>
+  <div class="center disabled">
+    <div class="div-game-field">
+      <div class="gallery-title">
+        <div class="time">
+          <div class="time-text">
+            <div>min</div>
+            <div>sec</div>
+          </div>
+          <div class="time-value">00:00
+          </div>
+        </div>
+        <div class="gallery-title-button">
+          <button class="button-again">Начать заново</button>
+        </div>
+      </div>
+      <div class="gallery">
+      </div>
+    </div>
+  </div>
+  <script src="src/script.js"></script>
 </body>
 </html>
