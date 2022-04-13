@@ -1,4 +1,7 @@
+import "../style.css";
+
 function shuffle(arr) {
+    //перемешивает карты
     var j, temp;
     for (var i = arr.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
@@ -8,6 +11,52 @@ function shuffle(arr) {
     }
     return arr;
 }
+
+function countCard(arr) {
+    //раздаем карты в зависимости от уровня игры
+    var shortArr = [];
+
+    if (level === 1) {
+        numberCard = 3;
+    }
+    if (level === 2) {
+        numberCard = 6;
+    }
+    if (level === 3) {
+        numberCard = 12;
+    }
+    shortArr = arr.slice(0, numberCard);
+    shortArr = shuffle(shortArr.concat(shortArr));
+
+    return shortArr;
+}
+
+function cardInit() {
+    var valueCard = [];
+    var shortCard = [];
+
+    valueCard = shuffle(valueCardInit); //перемешиваем колоду
+    shortCard = countCard(valueCard); //берем нужно количество карт
+
+    itemNumber = numberCard * 2;
+    for (var it = 1; it < itemNumber + 1; it++) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        gallery.appendChild(card);
+    }
+
+    valueCardSave = shortCard;
+}
+
+function removeChilds(node) {
+    var fc = node.firstChild;
+
+    while (fc) {
+        node.removeChild(fc);
+        fc = node.firstChild;
+    }
+}
+
 //выводим карты рубашками вверх
 const gallery = document.querySelector(".gallery");
 var itemNumber = 36;
@@ -49,29 +98,70 @@ var valueCardInit = [
     "туз пики",
     "туз черви",
 ]; //массив с порядковыми номерами карт;
-console.log(valueCardInit);
-var valueCard = shuffle(valueCardInit); //перемешанная колода;
-console.log(valueCard);
+var valueCardSave = [];
+var numberCard;
 
-for (var it = 1; it < itemNumber + 1; it++) {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    gallery.appendChild(card);
-}
+cardInit();
 
-const cardActive = document.querySelectorAll(".card");
 //по клику переворачиваем карты
-cardActive.forEach((element) => {
-    element.addEventListener("click", (event) => {
-        event.preventDefault();
-        var j = 0;
-        var tempElement = element;
-        for (var i = 36; i > 0; i--) {
+
+gallery.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    var j = 0;
+
+    if (event.target.className === "card") {
+        var tempElement = event.target;
+        for (var i = itemNumber; i > 0; i--) {
             if (tempElement.previousElementSibling) {
                 j++;
                 tempElement = tempElement.previousElementSibling;
             }
         }
-        event.target.style.background = `url("img/${valueCard[j]}.jpg")`;
+        event.target.style.background = `url("img/${valueCardSave[j]}.jpg")`;
+    }
+});
+
+const buttonLevels = document.querySelectorAll(".level-number");
+const containerLevel = document.querySelectorAll(".div-container-level");
+
+var level;
+
+buttonLevels.forEach((element) => {
+    element.addEventListener("click", (event) => {
+        event.preventDefault();
+        const buttons = element.parentElement.children;
+        for (let button of buttons) {
+            button.style.border = "#ffffff";
+        }
+        element.style.border = "#241245 solid 3px";
+        level = Number(element.textContent);
     });
+});
+
+const enter = document.querySelector(".enter");
+const divMain = document.querySelector(".div-main");
+const game = document.querySelector(".center");
+const buttonAgain = document.querySelector(".button-again");
+
+enter.addEventListener("click", (event) => {
+    event.preventDefault();
+    valueCardSave = [];
+    cardInit();
+    divMain.classList.add("disabled");
+    game.classList.remove("disabled");
+});
+
+buttonAgain.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    removeChilds(gallery);
+
+    game.classList.add("disabled");
+    const buttons = containerLevel[0].children;
+    for (let button of buttons) {
+        button.style.border = "#ffffff";
+    }
+    level = 0;
+    divMain.classList.remove("disabled");
 });
