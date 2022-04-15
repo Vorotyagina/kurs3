@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "./dist",
+        "noImplicitAny": false,
+        "module": "es6",
+        "target": "es5",
+        "skipLibCheck": true,
+        "allowJs": true,
+        "sourceMap": true,
+        "moduleResolution": "node"
+    }
+}
