@@ -9,8 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -cdp 3001",
     "lint:ts": "tsc --noEmit",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint ./src/**/*.js",
+    "lint": "npm run lint:ts && npm run lint:css",
+    "lint:js": "eslint ./src/**/*.ts",
     "lint:css": "stylelint ./src/*.css",
     "prepare": "husky install",
     "format": "prettier --write ./src"
