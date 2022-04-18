@@ -4,15 +4,21 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: "development",
-    entry: "./src/script.js",
+    entry: "./src/script.ts",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
         clean: true,
     },
-    devtool: process.env.NODE_ENV === "production" ? "source-map" : "source-map",
+    devtool:
+        process.env.NODE_ENV === "production" ? "source-map" : "source-map",
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
@@ -25,24 +31,19 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: "asset/resource",
             },
-            { test: /\.(js)$/, use: 'babel-loader' },
+            { test: /\.(js)$/, use: "babel-loader" },
         ],
     },
+    resolve: {
+        extensions: [".ts", ".js"],
+    },
     optimization: {
-        minimizer: [
-          "..."
-        ],
+        minimizer: ["..."],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: "./index.html",
         }),
-        new CopyWebpackPlugin(
-            { patterns:
-                [
-                    { from: "./img", to: "img" }
-                ]
-            }
-    )
-],
+        new CopyWebpackPlugin({ patterns: [{ from: "./img", to: "img" }] }),
+    ],
 };
